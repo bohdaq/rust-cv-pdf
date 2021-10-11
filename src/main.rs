@@ -42,7 +42,7 @@ fn main() {
         // setup the general fonts.
         // see the docs for these functions for details
         current_layer.set_font(&font2, 33.0);
-        current_layer.set_text_cursor(Mm(20.0), Mm(560.0));
+        current_layer.set_text_cursor(Mm(20.0), Mm(660.0));
         current_layer.set_line_height(33.0);
         current_layer.set_word_spacing(3000.0);
         current_layer.set_character_spacing(10.0);
@@ -55,6 +55,9 @@ fn main() {
         current_layer.set_text_rendering_mode(TextRenderingMode::Fill);
         current_layer.add_line_break();
         current_layer.write_text(position.clone(), &font2);
+        current_layer.add_line_break();
+
+        current_layer.write_text("cv.bohdaq.name", &font2);
         current_layer.add_line_break();
 
 
@@ -162,14 +165,24 @@ fn main() {
         current_layer.write_text(employment_item_label, &font);
         current_layer.add_line_break();
 
-        let employment_item_description = "Worked as a frontend lead in a small team on a product.
-Product purpose is to provide ability of a company incorporation in Singapore.
-Worked closely on gathering requirements, discussions and technical implementation.";
+        let employment_item_description = "Worked as a frontend lead in a small team on a product.";
         current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
 
-        let employment_item_core_technologies = "Core technologies: Polymer, lit-element, Firebase, Google Cloud, Spring, Git, Jenkins";
+        let employment_item_description = "Product purpose is to provide ability of a company";
+        current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
+
+        let employment_item_description = "incorporation in Singapore.";
+        current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
+
+        let employment_item_core_technologies = "Core technologies: Polymer, lit-element, Firebase,";
         current_layer.write_text(employment_item_core_technologies, &font);
+        current_layer.add_line_break();
 
+        let employment_item_core_technologies = "Google Cloud, Spring, Git, Jenkins";
+        current_layer.write_text(employment_item_core_technologies, &font);
         current_layer.add_line_break();
 
 
@@ -182,13 +195,27 @@ Worked closely on gathering requirements, discussions and technical implementati
         current_layer.write_text(employment_item_label, &font);
         current_layer.add_line_break();
 
-        let employment_item_description = String::from("Worked as a backend enginner in a dedicated team on a product.
-Product purpose is to provide ability of a collaboration and brainstorming for teams.");
+        let employment_item_description = String::from("Worked as a backend enginner in a dedicated team on a");
         current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
 
-        let employment_item_core_technologies = "Core technologies: GWT, Spring, PostgreSQL, HTTP Long Pooling, Objective C, Git";
+
+        let employment_item_description = "product. Product purpose is to provide ability of a ";
+        current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
+
+        let employment_item_description = "collaboration and brainstorming for teams.";
+        current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
+
+
+        let employment_item_core_technologies = "Core technologies: GWT, Spring, PostgreSQL,";
         current_layer.write_text(employment_item_core_technologies, &font);
+        current_layer.add_line_break();
 
+
+        let employment_item_core_technologies = "HTTP Long Pooling, Objective C, Git";
+        current_layer.write_text(employment_item_core_technologies, &font);
         current_layer.add_line_break();
 
 
@@ -202,8 +229,17 @@ Product purpose is to provide ability of a collaboration and brainstorming for t
         current_layer.add_line_break();
 
         let employment_item_description = String::from("Worked as a frontend enginner on a startup.
-Startup purpose is to provide in-browser photo editing capabilities like in Lightroom.");
+Startup");
         current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
+
+        let employment_item_description = String::from("purpose is to provide in-browser photo editing");
+        current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
+
+        let employment_item_description = String::from("capabilities like in Lightroom.");
+        current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
 
         let employment_item_core_technologies = "Core technologies: JavaScript, Git";
         current_layer.write_text(employment_item_core_technologies, &font);
@@ -222,12 +258,28 @@ Startup purpose is to provide in-browser photo editing capabilities like in Ligh
         current_layer.write_text(employment_item_label, &font);
         current_layer.add_line_break();
 
-        let employment_item_description = String::from("Worked as a Java developer.
-Took part in development projects related to mobile device managment and provisioning.");
+        let employment_item_description = String::from("Worked as a Java developer. Took part in development");
         current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
 
-        let employment_item_core_technologies = "Core technologies: Java, Play Framework, OMA Device Management, Ruby on Rails, MySQL, Git"; current_layer.write_text(employment_item_core_technologies, &font);
+        let employment_item_description = String::from("projects related to mobile device managment and");
+        current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
 
+        let employment_item_description = String::from("provisioning.");
+        current_layer.write_text(employment_item_description, &font);
+        current_layer.add_line_break();
+
+        let employment_item_core_technologies = "Core technologies: Java, Play Framework,"; 
+        current_layer.write_text(employment_item_core_technologies, &font);
+        current_layer.add_line_break();
+
+        let employment_item_core_technologies = "OMA Device Management, Ruby on Rails,"; 
+        current_layer.write_text(employment_item_core_technologies, &font);
+        current_layer.add_line_break();
+
+        let employment_item_core_technologies = "MySQL, Git"; 
+        current_layer.write_text(employment_item_core_technologies, &font);
         current_layer.add_line_break();
 
 
@@ -245,9 +297,23 @@ Took part in development projects related to mobile device managment and provisi
         current_layer.add_line_break();
 
 
-        current_layer.write_text("A vision of how things are working on, from a physical layer up to application layer. Significant expertise in building, deploying and maintaining software. Hands on experience with setting up environments, releases and production support.", &font);
+        current_layer.write_text("A vision of how things are working on, from a physical", &font);
+        current_layer.add_line_break();  
 
+
+        current_layer.write_text("layer up to application layer. Significant expertise in", &font);
         current_layer.add_line_break();
+
+        current_layer.write_text("building, deploying and maintaining software. Hands on", &font);
+        current_layer.add_line_break();
+
+        current_layer.write_text("experience with setting up environments, releases and", &font);
+        current_layer.add_line_break();
+
+        current_layer.write_text("production support.", &font);
+        current_layer.add_line_break();
+
+        
         current_layer.add_line_break();
 
 
