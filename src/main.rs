@@ -4,7 +4,7 @@ use std::io::BufWriter;
 
 fn main() {
     println!("Hello, world!");
-    let (mut doc, page1, layer1) = PdfDocument::new("PDF_Document_title", Mm(320.0), Mm(690.0), "Layer 1");
+    let (mut doc, page1, layer1) = PdfDocument::new("PDF_Document_title", Mm(320.0), Mm(590.0), "Layer 1");
     doc = doc.with_conformance(PdfConformance::Custom(CustomPdfConformance {
         requires_icc_profile: false,
         requires_xmp_metadata: false,
@@ -42,7 +42,7 @@ fn main() {
         // setup the general fonts.
         // see the docs for these functions for details
         current_layer.set_font(&font2, 33.0);
-        current_layer.set_text_cursor(Mm(20.0), Mm(660.0));
+        current_layer.set_text_cursor(Mm(20.0), Mm(550.0));
         current_layer.set_line_height(33.0);
         current_layer.set_word_spacing(3000.0);
         current_layer.set_character_spacing(10.0);
@@ -350,6 +350,18 @@ Startup");
         current_layer.write_text(educational_history_item, &font);
         current_layer.add_line_break();
 
+        current_layer.add_line_break();
+        current_layer.add_line_break();
+
+        let educational_history_label = "Source code of this CV is available at:";
+        current_layer.set_font(&font2, 14.0);
+        current_layer.set_line_height(14.0);
+        current_layer.set_word_spacing(1000.0);
+        current_layer.set_character_spacing(3.0);
+        current_layer.write_text(educational_history_label, &font);
+        current_layer.add_line_break();
+        current_layer.write_text("https://github.com/bohdaq/rust-cv-pdf/", &font);
+        current_layer.add_line_break();
 
 
 
