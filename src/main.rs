@@ -12,9 +12,6 @@ fn main() {
     }));
     let current_layer = doc.get_page(page1).get_layer(layer1);
 
-    let left_offset = 20.0;
-    let top_offset = 20.0;
-
     //Data defined here
     let name = "Bohdan Tsap";
     let position = "Developer";
@@ -72,34 +69,34 @@ fn main() {
         current_layer.set_character_spacing(5.0);
 
         current_layer.set_text_rendering_mode(TextRenderingMode::Stroke);
-        let personalInfoLabel = "INFO";
-        current_layer.write_text(personalInfoLabel.clone(), &font);
+        let personal_info_label = "INFO";
+        current_layer.write_text(personal_info_label.clone(), &font);
         current_layer.set_text_rendering_mode(TextRenderingMode::Fill);
         current_layer.add_line_break();
 
-        let personalInfoData = "Highly competent sofware engineer capable of designing"; 
-        current_layer.write_text(personalInfoData.clone(), &font);
+        let personal_info_data = "Highly competent sofware engineer capable of designing";
+        current_layer.write_text(personal_info_data.clone(), &font);
         current_layer.add_line_break();
 
-        let personalInfoData = "solutions from 'ground up'. Deep understanding of";
-        current_layer.write_text(personalInfoData.clone(), &font);
+        let personal_info_data = "solutions from 'ground up'. Deep understanding of";
+        current_layer.write_text(personal_info_data.clone(), &font);
         current_layer.add_line_break();
 
 
-        let personalInfoData = "underlying technical stack alongside with knowledge";
-        current_layer.write_text(personalInfoData.clone(), &font);
+        let personal_info_data = "underlying technical stack alongside with knowledge";
+        current_layer.write_text(personal_info_data.clone(), &font);
         current_layer.add_line_break();
 
-        let personalInfoData = "of the basic computer science. More than 8 years of";
-        current_layer.write_text(personalInfoData.clone(), &font);
+        let personal_info_data = "of the basic computer science. More than 8 years of";
+        current_layer.write_text(personal_info_data.clone(), &font);
         current_layer.add_line_break();
 
-        let personalInfoData = "software engineering experience including frontend";
-        current_layer.write_text(personalInfoData.clone(), &font);
+        let personal_info_data = "software engineering experience including frontend";
+        current_layer.write_text(personal_info_data.clone(), &font);
         current_layer.add_line_break();
 
-        let personalInfoData = "and backend.";
-        current_layer.write_text(personalInfoData.clone(), &font);
+        let personal_info_data = "and backend.";
+        current_layer.write_text(personal_info_data.clone(), &font);
         current_layer.add_line_break();
         current_layer.add_line_break();
 
