@@ -54,7 +54,7 @@ fn main() {
         current_layer.write_text(position.clone(), &font2);
         current_layer.add_line_break();
 
-        current_layer.write_text("cv.bohdaq.name", &font2);
+        current_layer.write_text("https://wlo.link/@bohdan_tsap", &font2);
         current_layer.add_line_break();
 
 
