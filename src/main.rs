@@ -342,11 +342,6 @@ Startup");
         current_layer.write_text(educational_history_item, &font);
         current_layer.add_line_break();
 
-        let educational_history_item = "Master of Computer Science (2014-2015)";
-
-        current_layer.write_text(educational_history_item, &font);
-        current_layer.add_line_break();
-
         current_layer.add_line_break();
         current_layer.add_line_break();
 
